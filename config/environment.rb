@@ -1,5 +1,5 @@
-# Load the Rails application.
+# Load the RailsBlogTutorial application.
 require_relative 'application'
 
-# Initialize the Rails application.
-Rails.application.initialize!
+# Initialize the RailsBlogTutorial application.
+RailsBlogTutorial.application.initialize!
