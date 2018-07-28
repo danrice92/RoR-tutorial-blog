@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def create
@@ -17,8 +18,27 @@ class ArticlesController < ApplicationController
     # classnames begin with capital letters, so we're making a new Article
     # params[:article] pulls in the data provided by the user in the form
 
-    @article.save
-    redirect_to @article
+    if @article.save
+      redirect_to @article
+      # only redirects using existing instance variable if it meets params
+    else
+      render 'new'
+      # also renders new, but with new instance variable
+    end
+  end
+
+  def edit
+    @article = Article.find params[:id]
+  end
+
+  def update
+    @article = Article.find params[:id]
+
+    if @article.update article_params
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   private
