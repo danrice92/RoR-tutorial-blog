@@ -1,4 +1,4 @@
-RailsBlogTutorial.application.configure do
+Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -14,7 +14,7 @@ RailsBlogTutorial.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if RailsBlogTutorial.root.join('tmp', 'caching-dev.txt').exist?
+  if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
     config.cache_store = :memory_store
@@ -35,7 +35,7 @@ RailsBlogTutorial.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  # Print deprecation notices to the RailsBlogTutorial logger.
+  # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.

@@ -3,4 +3,4 @@
 
 require_relative 'config/application'
 
-RailsBlogTutorial.application.load_tasks
+Rails.application.load_tasks

@@ -2,4 +2,4 @@
 
 require_relative 'config/environment'
 
-run RailsBlogTutorial.application
+run Rails.application
